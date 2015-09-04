@@ -13,8 +13,8 @@ cosmos:browserify
 
 npm-container
 react
-semantic:ui-css
 app-index
 app-tasks
 app
 less
+fortawesome:fontawesome

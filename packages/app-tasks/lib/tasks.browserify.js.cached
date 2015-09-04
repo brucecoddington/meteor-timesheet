@@ -53,4 +53,4 @@ classNames = require('classnames');
 }());
 
 },{}]},{},[1])
-//# sourceMappingURL=app-tasks/tasks.browserify.js
+//# sourceMappingURL=app-tasks/lib/tasks.browserify.js

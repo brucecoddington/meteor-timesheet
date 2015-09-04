@@ -5,7 +5,7 @@ Package.describe({
 
 Npm.depends({
   'classnames': '2.1.3',
-  'externalify': '0.1.0',
+  'externalify': '0.1.0'
 });
 
 Package.onUse(function (api) {
@@ -18,15 +18,11 @@ Package.onUse(function (api) {
     'mongo'
   ], ['client', 'server'])
 
-  api.addFiles([
-    'tasks.collection.js'
-  ], ['client', 'server']);
+  api.addFiles('lib/tasks.browserify.options.json', 'client');
+  api.addFiles('lib/tasks.browserify.js', 'client');
 
-  api.addFiles([
-    'tasks.browserify.options.json',
-    'tasks.browserify.js',
-    'task.jsx'
-  ], 'client');
+  api.addFiles('tasks.collection.js', ['client', 'server']);
+  api.addFiles('task.jsx', 'client');
 
   api.export([
     'Tasks',

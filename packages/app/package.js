@@ -7,14 +7,16 @@ Package.onUse(function (api) {
   api.versionsFrom('1.1.0.3');
 
   api.use('react', 'client');
-  api.use('semantic:ui-css', 'client');
   api.use('app-tasks', 'client');
 
-  api.addFiles('app.css', 'client');
+  //api.addFiles('properties.js', ['client', 'server']);
   api.addFiles('app.jsx', 'client');
+  api.addFiles('routes.jsx', 'client');
 
   api.export([
-    'App'
+    'App',
+    'AppRoutes',
+    //'Properties'
   ]);
 
 });
