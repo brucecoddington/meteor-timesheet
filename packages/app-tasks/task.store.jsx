@@ -1,0 +1,3 @@
+TaskStore = _.extend(Store, {
+  
+});
