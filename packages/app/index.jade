@@ -1,0 +1,28 @@
+html(class="no-js")
+  head
+    // Meta Data
+    title Timesheetz
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='icon', type='image/ico', href='/assets/img/favicon.ico')
+
+    - if (env == 'prod')
+      link(href="/assets/css/style.min.css", rel="stylesheet", type="text/css")
+    - else
+      link(href="/assets/css/style.css", rel="stylesheet", type="text/css")
+
+  body
+    #app !{html}
+
+    - if (typeof data !== 'undefined')
+      script.
+        window.AppState = !{JSON.stringify(data)};
+        window.PORT = !{process.env.PORT || 5000};
+
+    case env
+      when 'production'
+        script(src="/assets/js/app.min.js")
+
+      default
+        script(src="/assets/js/app.js")
